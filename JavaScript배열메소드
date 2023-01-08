@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+
+        // 1. push() : 배열의 마지막에 요소 추가
+        arr.push(6);
+        console.log("push:" + arr);
+        // --> 배열의 마지막에 6이 추가 됨
+
+        // 2. pop() : 배열의 마지막 요소 삭제
+        arr.pop();
+        console.log("pop:" + arr);
+        //--> 마지막요소였던 6이 삭제됨
+
+        // 3. unshift() : 배열에 첫번째에 요소 추가
+        arr.unshift(0);
+        console.log("unshift:" + arr);
+        //--> 배열의 첫번째에 0이 추가됨
+
+        // 4. shift() : 배열에 첫번째 요소 삭제
+        arr.shift();
+        console.log("shift:" + arr);
+        // --> 첫번째요소였던 0이 삭제됨
+
+        // <unshift, shift / pop, push 의 성능차이>
+        // unshift, shift의 동작순서
+        // 1. 0번째 인덱스 값을 추가/삭제
+        // 2. 뒤에 있는 요소의 인덱스 값 변경
+        // 3. length값 변경
+
+
+        // pop , push의 동작 순서
+        // 1. 마지막 인덱스 값을 추가/삭제
+        // 2. length값 변경
+
+        // reverse() : 배열의 요소를 반대로 정렬
+        arr.reverse();
+        console.log("reverse:" + arr);
+        // --> 배열의 순서 5,4,3,2,1 로 변경
+
+        // concat() : 배열 합치기
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 5, 6];
+        // arr1 를 기준으로 arr2 를 합쳐서 arr3 라는 새로운 배열을 만듬
+        var arr3 = arr1.concat(arr2);
+        console.log(arr3);
+        //---> arr3 는 1,2,3,4,5,6 
+
+        // join() : 배열에 구분자를 지정해서 문자열로 리턴
+        // 배열마다 / 기호를 붙임
+        arr3 = arr3.join('/');
+        console.log("join : " + arr3);
+        console.log("join의 리턴타입: " + typeof arr3);
+
+        // splice : 배열의 요소를 삭제하고 새로운 내용을 추가
+        // splice(시작점, 제거개수, 추가할 값(개수제한x))
+        arr.splice(0, 2, 7, 8);
+        // -->0번째부터 2개를 삭제하고 7과 8을 추가
+        console.log("splice"+arr);
+
+        // slice() : 배열 잘라내기
+        // slice(시작점,끝+1);
+        arr = arr.slice(2,5);
+        // 7,8,3,2,1 이 있는 배열에서 2번째부터 5번째 전까지있는
+        // 배열을 잘라낸다=똑 떼어냄 --> 3,2,1 만 배열에 남음
+        console.log("slice : "+arr);
+        
+        // includes(): 요소가 배열에 있는지(T) 없는지(F) 확인 
+        var result = arr.includes(1);
+        // --> 배열에 1이라는 숫자가 있는지 없는지 확인 --> 리턴타입 boolean
+        console.log("includes : "+ result);
+        // --> 배열에 1 이 포함되어있기 때문에 결과값 true
+
+        //indexOf() : 찾으려는 요소의 위치를 반환
+        result =  arr.indexOf(1);
+        console.log("indexOf:"+result);
+        
+        // 찾으려는 요소가 없는 경우 -1 반환
+        result =  arr.indexOf(4);
+        console.log("indexOf요소가 없을 때:"+result);
+        
+        // sort() : 정렬 -> 배열의 요소를 문자로 만든 후에 아스키코드 순서로 정렬
+        var arr =[1,11,3,10,2,12];
+        arr.sort();
+        console.log("sort:"+arr);
+
+        // 오름차순 정렬
+        arr.sort(asc);
+        console.log("sort오름차순 : "+ arr);
+        
+        // 내림차순 정렬
+        arr.sort(dec);
+        console.log("sort내림차순 :" + arr);
+
+        // 오름차순 함수
+        function asc(a,b){
+            return b-a;
+        }
+
+        // 내림차순 함수
+        function dec(a,b){
+            return a-b;
+        }
+        </script>
+
+
+</body>
+
+</html>
