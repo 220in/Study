@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+       // 1. 배열   : 여러개의 데이터를 하나의 묶음으로 관리하는 자료구조(순서O)
+       //     - JS에서는 한 배열에 모든 데이터 타입 저장 가능
+       //     - JS에서는 배열의 크기가 동적(데이터를 추가하면 자동으로 공간 할당)
+       //     - 인덱스와 인덱스로 대응하며, 인덱스는 0부터 시작
+
+       // 2. 배열 선언 방법 2가지
+        var nameList=[];
+        var nameList= new Array();
+
+       // 3. 배열 생성 2가지
+       var nameList =["이인영",24,"정윤한",25,"이솔",25,"김경진","류승주"]; 
+       console.log("[] :"+nameList);
+       var nameList = new Array("이인영",24,"정윤한",25,"이솔",25,"김경진","류승주");
+       console.log("new Array: "+nameList);
+
+       // 4. 배열에 접근 
+       console.log(nameList[0]);
+       console.log(nameList[1]);
+       console.log(nameList[2]);
+        
+       for(var i = 0 ; i < 4; i++){
+        console.log(nameList[i]);
+       }
+
+       // 5. 배열의 크기
+       console.log("배열의 크기 :" + nameList.length );
+
+       // length 프로퍼티는 쓰기가 가능하다.
+       // length의 값을 감소시키면 배열이 잘린다. 복구불가
+       var arr =[1,2,3,4,5]; // --> 배열의 크기는 5
+       arr.length = 3; //--> 배열의 크기를 3으로 감소
+       console.log(arr); //--> 1,2,3 까지만 출력됨
+       arr.length = 5; //--> 배열의 크기를 다시 5로 증가
+       console.log(arr); //--> 4,5가 복구 되지 않고, 1,2,3만 출력됨
+
+       // 배열.length = 0 ; 배열의 값을 모두 비울 수 있다.
+
+       // 6. 다차원 배열
+        var matrix =[
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ];
+       // 숫자 9만 불러오기 
+       console.log(matrix)[2][2];
+   
+   </script>
+ </body>
+ </html>
