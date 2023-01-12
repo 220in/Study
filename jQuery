@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery 라이브러리 불러오기 -->
+    <!-- 1. CDN방식으로 불러오기 -> 인터넷으로 다운로드(사용시 인터넷 연결 필요)
+            -> 배포하거나 공유할 때 사용 -->
+    <!-- https://code.jquery.com/jquery/-->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- 2. jQuery 파일 직접 다운받아서 불러오기-> 안전성이 높음 -->
+    <!-- https://jquery.com/download/-->
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <img src="./img.jpg" alt="">
+    <img src="./img2.jpg" alt="">
+
+    <script>
+        // 바닐라 자바스크립트
+        var imgs = document.getElementsByTagName('img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].style.width = "500px";
+        }
+
+        // jQuery
+        // $('선택자').접근하고 싶은 스타일('지정');
+        $('img').width('200px');
+    </script>
+</body>
+
+</html>
