@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <h1> 나는 </h1>
+    <h2> 집이야 </h2>
+    <a> 집으로 이동 </a>
+    <script>
+        // .html() : 선택한 요소의 content를 가져온다.
+        // .html('바꿀 값') : 선택한 요소의 content를 변경(태그o)
+        var h1 = $('h1').html();
+        console.log(h1);
+        $('h1').html('<h1> 나는! </h1>');
+        // .text() : 선택한 요소의 content를 가져온다.
+        // .text('바꿀값') : 선택한 요소의 content를 변경(태그x)
+        var h2 = $('h2').text();
+        console.log(h2);
+        $('h2').text('집이다!');
+        // .css('속성','값') : 선택한 요소의 style을 설정
+        $('h1').css('color','green');
+        $('h2').css('color','tomato');
+
+        // .attr('속성','값') : 선택한 요소의 attribute(속성) 를 설정  
+        $('a').attr('href','https://www.google.com');  
+        
+        // .append('추가할 값') : 선택한 요소의 마지막에 새로운 요소를 추가
+        // h1 태그 추가하기 --> body 태그 안에 h1d을 추가한다.
+        $('body').append('<h1> Body에 추가하기!</h1>');
+
+        // .preappend('추가할 값') : 선택한 요소의 첫번째에 새로운 요소를 추가
+
+        // .remove() : 선택한 요소를 html문서에서 삭제
+        // h2 태그 삭제
+        $('h2').remove();
+ 
+ </script>
+</body>
+
+</html>
