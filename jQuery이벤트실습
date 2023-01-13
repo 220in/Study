@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <!-- 1 . 버튼 클릭 시 body에 a태그를 추가하시오-->
+    <button> 클릭 </button>
+    <script>
+    // a 태그가 생성이 된 후 작동되는 이벤트 이므로, a 태그 생성 후 동작메소드를 넣는다.
+        $('button').on('click', function () {
+            $('body').append('<a>유튜브로 이동</a>');
+            // 2. 마우스로 a태그를 더블클릭하면 링크가 걸리도록 만드시오
+            $('a').on('dblclick', function () {
+                $('a').attr('href', 'https://www.youtube.com');
+            });
+            // 3. a 태그에 마우스를 올리면 색깔은 tomato 글씨크기는 50px 굵기는 bold 로 바꾸시오
+                $('a').css({
+                    color : 'tomato',
+                    fontSize :'50px',
+                    fontWeight : 'bold'
+                });
+                // $('a').css('color', 'tomato');
+                // $('a').css('font-size', '50px');
+                // $('a').css('font-weight', 'bold');
+            });
+            // 4. a 태그에 마우스를 내리면 a태그를 사라지게 만드시오
+            $('a').on('mouseout',function(){
+                 $('a').remove();
+            })
+        });
+
+       
+
+
+    </script>
+
+</body>
+
+</html>
