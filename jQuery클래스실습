@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+    }
+
+    .tomato {
+        background-color: tomato;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .black {
+        background-color: black;
+    }
+</style>
+
+<body>
+
+    <div></div>
+    <button id="tomato">토마토</button>
+    <button id="orange">오렌지</button>
+    <button id="black">블랙</button>
+
+    <script>
+        // class 변경
+        // 요소.addClass('클래스명') : 선택한 요소에 class 추가
+        // 요소.removeClass('클래스명') : 선택한 요소에서 class 삭제
+        $('#tomato').on('click', function(){
+          $('div').addClass('tomato');
+          // 오렌지를 클릭하고 토마토를 클릭할때 바뀌게하려면 오렌지 클래스를 삭제해야함
+          // 토마토 클래스만 남게하기!
+          $('div').removeClass('orange');
+        });
+
+        $('#orange').on('click',function(){
+            $('div').addClass('orange');
+            // 오렌지 클랙스만 남게하기!
+            $('div').removeClass('tomato');
+        })
+
+        $('#black').on('click',function(){
+            $('div').removeClass('tomato');
+            $('div').removeClass('orange');
+        })
+
+    </script>
+
+</body>
+
+</html>
