@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <h1>이인영</h1>
+    <h1>이인영</h1>
+    <h1>이인영</h1>
+    <h1>이인영</h1>
+
+    <script>
+        // 이름에 마우스를 올렸을 때 글자 배경색을 tomato로
+        // 마우스를 내리면 다시 흰색으로
+
+        // $('h1').on('mouseover',function(){
+        //     $('h1').css('background-color','tomato');
+        // })
+        // $('h1').on('mouseout',function(){
+        //     $('h1').css('background-color','white');
+        // })
+
+        // 만약 내가 마우스롤 올린 h1태그에만 색을 변경하고 싶을 때?
+        // this 키워드 사용 -> 호출된 HTML객체가 저장되는 변수
+        // -> 실제 이벤트가 동작하고 있는 주체를 가르킬 때 사용
+
+        $('h1').on('mouseover',function(){
+            $(this).css('background-color','tomato');
+        })
+        $('h1').on('mouseout',function(){
+            $(this).css('background-color','white');
+        })
+
+
+    </script>
+</body>
+</html>
