@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div id="table">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+        </table>
+
+    </div>
+    <button id="btn">데이터요청</button>
+
+    <script>
+        // jQuery로 ajax구현 방법
+
+        // 영화진흥위원회 OpenAPI ajax로 받아오기!
+        // 순서
+        // 1. 회원가입
+        // 2. 내가 사용할 api 찾기
+        // 3. 샘플코드 실행
+        // 4. 사용신청 -> 키 값 : 누가 얼마나 사용 했는지 알기 위한 식별자
+        //            -> url값 : 데이터를 사용할 사이트의 url, 어떤 사이트에서 쓸지 알기 위한 값
+        // 5. 내 키값을 이용해서 샘플코드 수정
+        //    - 만약 수정 후 응답데이터, 요청데이터 파악이 어려울 때 
+        //      -> 사용법 문서 보고 해석
+
+
+        // <<< 비동기통신으로 영화정보 받아오기 >>>
+        var getMovie = function () {
+            $.ajax({
+                // 요청할 서버의 경로
+                url: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=62dfa8c9e1c244268597165ca43beaa9&targetDt=20230112",
+
+                // type : "" , --> 요청방식(get/post)
+                // data : "" , --> 요청 시 보낼 데이터 ex)아이디 
+                // dataType : "" , -->  응답데이터의 형식(html,xml,json...)
+                success: function (result) {
+                    // 성공 시 callback 함수
+                    // 매개변수 -> 응답데이터 ex)result -> 중복입니다,아닙니다 
+
+                },
+                error: function () {
+                    // 실패 시 callback 함수
+                    alert("통신실패");
+                }
+            });
+
+        };
+
+        $('#btn').on('click', getMovie);
+
+
+    </script>
+
+
+</body>
+
+</html>
