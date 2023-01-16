@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+<style>
+    p{
+        background-color: pink;
+    }
+</style>
+<body>
+    <h1>this 사용해보기</h1>
+
+    <p>눌렀을때 본인의 이름을 출력하세요</p>
+    <p>눌렀을때 본인의 이름을 출력하세요</p>
+    <p>눌렀을때 본인의 이름을 출력하세요</p>
+    <p>눌렀을때 본인의 이름을 출력하세요</p>
+    <p>눌렀을때 본인의 이름을 출력하세요</p>
+    
+    <script>
+        // 클릭했을 때
+     $('p').on('click',function(){
+       $(this).text('이인영');
+       $(this).css('background-color','tomato');
+     })
+     
+     // 마우스 올렸다가 뗄 때
+     
+     $('p').on('mouseover',function(){
+        $(this).text('이인영');
+        $(this).css('background-color','tomato');
+     })
+     $('p').on('mouseout',function(){
+        $(this).text('눌렀을 때 본인의 이름을 출력하세요');
+        $(this).css('background-color','pink');
+     })
+
+    </script>
+</body>
+</html>
