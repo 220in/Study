@@ -1,0 +1,109 @@
+- **Kotlin에서 변수 선언 및 초기화**
+
+      - var(변수) , val(상수)
+
+      - ex ) var username : String = “Jayeon”
+
+               변수 username **:** 자료형 = “Jayeon”  
+
+                      변수 선언                /  초기화
+
+ 
+
+- **선언 : 공간만 만들어진 상태**
+
+      ex ) int num;
+
+ 
+
+- **초기화 : 선언 후 처음으로 값이 들어가는 것**
+
+     ex) num = 5;
+
+          num = 10; —> 재할당
+
+  
+
+- **선언 및** **초기화**
+
+      ex) int num2 = 5;
+
+- **기본 자료형 vs 레퍼런스 자료형**
+
+    - static(정적) 
+
+      ex) int num = 3;
+
+      동적 자료형을 참조하는 자료형
+
+    - heap(동적) : 내가 지정하는 값에 따라 데이터의 크 기가 변하는 자료형
+
+```kotlin
+
+fun main() {
+    println("Hello, world!!!")
+    
+    // ? , !! , 삼항연산자(Elvis 연산자) --> null 값이 들어가게 하기 위해서는 
+    // Kotlin 에서는 null을 그냥 변수에다가 넣을 수 있다.
+    // NPE를 예방하는 방법
+    // 
+    // << null이 들어갈 수 있게 하는 방법 >>
+    
+    // 1) ?(safe call)로 null 값 넣는 방법 : null이 오는것을 허용(null이 와도 compile을 진행한다)
+    // String? , Int? , Float? , Boolean?
+    var str : String? = null   
+    println(str?.length) // 변수가 null 값일 때 length 값을 알아보기 위해서는 변수명뒤에 +? 
+    var str2 : String = "가나다"
+    println(str2.length)
+    // 참조형데이터타입!
+    // 기본 자료형 vs 레퍼런스자료형
+    // - static(정적) 
+    //       ex) int num = 3;
+ 
+    //       동적 자료형을 참조하는 자료형
+
+    //     - heap(동적) : 내가 지정하는 값에 따라 데이터의 크 기가 변하는 자료형
+    // ?가 붙은 변수들은 Heap메모리에 저장되는 데이터들
+    
+    // 2) !!(asserted : 단정기호) : null 이 아님을 단정하고 컴파일을 강제 진행, but 변수가 null 값이면 NPE발생!
+//         println(str!!.length)
+       
+    // 3) Elvis 연산자(조건식?true:false)
+    //  str이 null 이면 0을 출력
+    //  str이 null 이 아니면 str.length를 출력
+    //  null이 올수도 있는 어떤 변수(값)?:null이면 출력할/대입할 default값 작성
+    //  str.length : null일 수도있는 문자열 길이 값
+        var length:Int = str?.length?:0
+    // str?.length가 만약에 null이라면 0이라는 값이 length에 들어가게 만들자
+    // str?.length가 null이 아니면, str?.length 값이 length라는 변수에 들어간다
+    println(length)
+  
+    
+    // 안드로이드에서는 로그캣, 에뮬레이터
+    // String만 가능 Int를 띄우고 싶다? -- >String 으로 변환 해줘야함 ! ex) 1 --->"1"
+    // toString()
+    val num = 256
+    println(num::class.java.simpleName) // num :: (이 가지고있는) class.java.simpleName(자료형을 확인)
+    val str3 = num.toString() // -> int형의 자료형을 String형으로 변환해주는 함수 (.toString)
+    println(str3::class.java.simpleName)
+    
+    // is : 자료형을 체크하는 연산자 
+    // instanceof랑 같은 역할 : 객체타입을 확인하는 역할
+    println(str3 is String) // str3 의 자료형이 is String 인가요? --> 맞으면 true 틀리면 false출력
+    
+    // 만약에 어떤 값이 정수일 수도 있고 실수일 수도 있다면 어떻게 처리해야할까?
+    //  Kotlin --> SmartCast
+    //  : 컴파일러가 자동으로 받아온 값을 확인한 후 형변환
+    
+    // Number(자료형)
+    var average : Number = 12.34 // Number 자료형에 넣었지만 12.34이므로 double로 들어감
+    println(average::class.java.simpleName) //-->double , double이 기본자료형으로 사용되는 이유?
+                                                       // float는 double 보다 작은 크기의 자료형이라 
+                                                       // 정확도에 손실값이 발생 -> 손실값을 최소화하기 위해 사용
+    average = 12
+    println(average::class.java.simpleName) // Integer
+    // 자동으로 형변환을 해주지만, 저장될때 무조건 객체 ,즉 레퍼런스 변수로 저장이 된다
+  
+     
+}
+```
