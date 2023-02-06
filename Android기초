@@ -1,0 +1,47 @@
+- **Kotlin이란?**
+
+       - 코틀린은 IntelliJIDEA라는 통합 개발 환경을 제작한 Jet…
+
+- **코틀린(Kotlin) 장점**
+
+     1) 자료형 오류를 미리 잡을 수 있는 정적 언어
+
+     2) NPE(NullPointException) 으로 인한 츠로그램의  중단 예방
+
+     3) 아주 간결하고 효율적인 언어
+
+     4) 함수형 프로그래밍과 객체 지향 프로그래밍이 모두 가능( 다중 패러다임 언어)
+
+     5) ;(세미콜론) 생략가능
+
+```kotlin
+// 실행 단축키 :ctrl + f9
+    // 
+    // <진행 순서>
+    // 변수 --> Null값 처리 --> 함수 --> 람다식 -- > Android 
+    // 
+    // 변수(Varialble)
+    // 1) 상수/변수(val/var)
+    // val 변수명 : 자료형 = 데이터 값
+    // 
+    
+    // int - > kotlin 에서는 Int
+    var age : Int = 25; // --> 저장은 int로 저장됨
+    println(age)
+    // Kotlin의 자료형
+    // // : Java랑 비슷하지만 앞에 영어가 대문자로 온다!
+    // Int, Float , String, Double, Long , Char , Boolean ...
+    // 대문자로 사용하면 레퍼런스자료형인데 저장은 기본자료형을 저장됨 (int,float,string, double, long, char, boolean...)
+    
+    var name : String = "이인영";
+    println(name)
+    
+    var area = "광주"; // "" 안에 들어있는 데이터이기 때문에 자료형을 String 으로 추론한다.
+    println(area)
+    // 코틀린은 정적인 언어 -- > 컴파일함녀서 데이터자료형을 추론
+    
+   // var str : String = null // String type에서는  null 값이 들어갈 수 없다.
+   // println(str)
+    
+    
+```
