@@ -1,0 +1,64 @@
+// <<Collection>>
+    // MutableListOf : 크기가 변할 수 있는 (크키가 변하지 않는 : listOf)
+    //  1) 크기가 변하지 않는 listOf
+    var testList1 = listOf("a","b","c")
+    // 선언을 하고나면 아래쪽에서 크기변경이 불가능
+    // 크기가 3으로 고정되어있는 list
+    println(testList1[0]) // --> a
+    //  2) 크기가 변하는 mutableListOf
+    var testList2 = mutableListOf("a","b","c")
+    testList2.add("d")
+    println(testList2)
+    
+    // MutableMapOf : jjson,dictional동일한 자료구조(Key값, value값)
+    // <Key값의 자료형, Value값을 자료형>
+    // (1,"짱구")
+    // put : Map에서 데이터를 입력할 때 사용하는 키워드
+    val 떡잎방범대 = mutableMapOf<Int,String>()
+    떡잎방범대.put(1,"짱구")
+    떡잎방범대.put(2,"철수")
+    떡잎방범대.put(3,"유리")
+    떡잎방범대.put(4,"훈이")
+    떡잎방범대.put(5,"맹구")
+    
+    // Map은 Index가 1부터 시작한다.
+    println(떡잎방범대[1])
+    // Map을 한번에 출력(key, value)
+    for(i in 떡잎방범대){
+        print(i.key)// i에는 떡잎방범대[x]에 들어있는 key, value
+        print(i.value)
+        print("key값은 ${i.key}")
+        println("")
+    }
+    
+    // MutableSetOf
+    // Set : 중복되는 데이터는 없애주는 기능을 가지고 있음!
+    // 값을 추가/삭제 : add/remove
+    val testList3 = mutableSetOf("a","b","c","d")
+    testList3.add("e")
+    println(testList3)
+    testList3.add("e")
+    println(testList3) // -> set은 중복되는 데이터는 없애주기때문에 e를 추가해도 추가되지 않음
+    
+    // List 가공
+    val testList4 = mutableListOf<Int>()
+    testList4.add(10)
+    testList4.add(20)
+    testList4.add(30)
+    testList4.add(40)
+    testList4.add(50)
+    testList4.add(60)
+    testList4.add(70)
+    testList4.add(10)
+    testList4.add(90)
+    testList4.add(100)
+    
+    // 중복을 제거하는 기능이 내부적으로 설계 : distinct()
+    println(testList4.distinct())
+    
+    // 큰값, 작은값을 출력해주는 기능
+    println(testList4.maxOrNull()) // 값을 안넣은 경우 null 출력
+    println(testList4.minOrNull())
+    
+    // 평균값 구하기 : average()
+    println(testList4.average())
