@@ -1,0 +1,111 @@
+- **함수 구조**
+
+      -  fun 함수명(매개변수) :리턴타입 { 로직(body) }
+
+       ex) fun add(num1 : Int , num2 :Int) : Int{
+
+              return num1 + num2
+
+            }
+
+      - * void -? unit = > return 타입 x 기능 자체를 가진 함수
+
+- **함수 작성방법**
+
+```kotlin
+fun main() {
+      // 실행시킬 코드
+     println(sum(5,4))
+     sumPrint(3,5) 
+    
+}
+// main함수 바깥쪽에서 fun을 만들어야한다!
+
+// 1) fun : 함수의 약어, 함수를 만들겠다라고 선언
+// 2) 함수명(호출명) : 변수명, 함수명 camel 표기법!
+//    ex) appleOfTaste , binding(라이브러리)애서 필수
+// 3) 함수명(매개변수) : main에서 호출할 때 보내주는 전달인자가 있으면 함수에서 받아주는 매개 변수도 있다!
+//                     (전달인자와 매개변수는 개수/데이터 타입이 일치해야 함!)
+// 4) : 리턴타입 작성 (함수가 최종적으로 돌려주는 결과값의 데이터 타입)
+// 5) {body(로직작성)}
+fun sum(num1 : Int , num2 :Int) : Int{
+    // 만약에, 리턴타입에 자료형이 있다! (Int, Float , String ...)
+    // body안에 return이라는 키워드가 꼭 붙는다
+    // return 호출한 곳으로 돌아갈 
+    return num1 + num2
+}
+
+fun sumPrint(num1 : Int , num2 : Int) : Unit{
+   
+    println(num1+num2)
+    // Unit - > return x
+    // 출력하는 기능을 호출한 부분으로 돌려주고 있다
+    
+}
+```
+
+- **함수 최소화 방법**
+
+```kotlin
+fun main() {
+     getName() // 이름 값을 가지고 오는 함수
+     println(getName())
+     // 매개변수, 리턴타입
+    
+    println(sum(2,3)) // 2랑 3이랑 더한 결과값을 가지고 오는 함수
+    
+    
+}
+
+// 1) 리턴 타입을 생략할 수 있다
+//    return 키워드 옆에 있는 데이터 값을 보고 Kotlin에서 추론한다
+// 2) {로직} 한 줄이면 중괄호가 생략가능
+//    단, return 키워드 대신 =(대입연산자)를 사용한다   
+fun getName() = "이인영"
+    // return 결과값
+    // "이인영"
+
+// int + int = int 이다라는 것을 추론
+fun sum(num1:Int,num2:Int) = num1+num2
+```
+
+[Kolin함수 예제](https://www.notion.so/Kolin-6aba2bb1c09c46f8a6b3b51b1b30527a)
+
+- **지역함수와 최상위레벨함수**
+
+```kotlin
+// 최상위 레벨 함수
+fun main() {
+    // 지역함수 - > 함수가 먼저 선언되어있어야 다음 코드에서 함수 사용이 가능하다. 
+    fun getYourName() = "서윤정"
+    println(getYourName())
+    
+    println(getMyName())
+}
+
+// 최상위 레벨 함수 -> 구역(지역)에 영향을 받지 않는 함수로 나중에 선언 되어도 위에서 사용할 수 있다
+fun getMyName() = "이인영"
+```
+
+- **함수 오버로딩( Overloading)**
+
+```kotlin
+fun main() {
+  // 오버로딩(Overloadding)
+  // : 같은 클래스 내에서 같은 이름으로 함수(메서드)를 사용할 수 있다.
+  // 단, 매개변수의 형태가 달라야한다(개수/데이터타입)
+  
+  // setName(성,이름) --> 한국이름 - > 이인영
+  println(setName("이","인영"))
+  // setName(firstName,middleName, lastName) - > 스티븐, 폴, 잡스
+  println(setName("스티븐","폴","잡스"))
+ 
+}
+
+// 한국사람이 이름을 저장할 수 있는 setName
+
+fun setName(firstName:String , lastName : String) = firstName+lastName
+
+// 미국사람이 이름을 저장할 수 있는 setName
+fun setName(firstName : String , middleName :String ,lastName : String) = firstName + middleName + lastName
+```
