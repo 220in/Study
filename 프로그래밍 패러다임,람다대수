@@ -1,0 +1,69 @@
+- **프로그래밍 패러다임**
+
+    : 개발자가 개발하는데 있어서 당연하게 생각하는 패턴, 상식, 개념
+함수형 프로그래밍 (Kotlin, javaScript)
+
+- **Kotlin의 일급객체**
+
+ 일급 객체 : 포함 관계를 갖는데 있어서 최상위 레벨
+ ex)Java : 객체(Class) 지향 프로그램
+ Class 가 변수, 함수, 클래스(inner class), (필드,메서드,생성자...)를 품고 있다
+ ex) Kotlin : 함수형 프로그램
+함수가 변수, 함수, 클래스,필드,메서드,생성자를 다 포함할 수 있다. *** 
+
++ 변수처럼 사용 가능해야한다!
+ Person p1 = new Person
+함수를 변수처럼 사용가능해야한다  --> 람다 대수
+
+- **람다 대수**
+수학 : 이름이 없는 함수
+        두개 이상의 수를 1개의 결과값으로 단순화
+ 프로그래밍 : 다른 함수의 인사로 넘기는 함수(함수를 전달인자/매개변수 로 사용)
+            함수의 결과값으로 반환하는 함수
+            변수에 저장하는 함수를 의미 ***
+- **람다식 구조 : sum()**
+{num1 : Int , num2 :Int - > num1+ num2}
+- **람다식 예시**
+
+```kotlin
+fun main() {
+  
+  sum(5,6)
+  // 람다식sum을 사용할 코드
+  var str : String = "이인영"
+    
+  //             :(매개변수의 자료형)-> 결과값 자료형 = {변수명:자료형,변수명:자료형 -> 결과값}  
+  val sumLambda :(Int,Int)-> Int= {num1 : Int , num2 : Int -> num1+num2}
+  // 1. 람다식의 매개변수에 자료형이 지정되어있다면
+  // 변수에서 자료형은 생략가능하다.
+  val sumLambda = {num1:Int,num2:Int -> num1+num2}
+  
+  // 2. 변수의 매개변수 자료형이 지정되어있다면 람다식의 매개변수 자료형이 생략가능
+  //   val sumLambda(Int,Int):Int = {num1,num2 -> num1+num2}
+  
+  // 단, 1,2를 동시에 적용시킬 수 있을 까요? --> 불가!
+  // 람다식과 변수의 자료형을 둘 다 생략한 상태는 추론이 불가능
+  sumLambda(3,4)
+}
+
+fun sum(num1 : Int , num2 : Int) Int{
+    return num1 + num2
+}
+
+// 1) "Hello World" 문구를 출력해주는 함수
+  fun greet():Unit{
+      println("Hello World")
+  }
+  // hello 변수에 람다식을 담아주세요
+  val hello : ()-> Unit={println("Hello World")}
+  
+  
+  // 2) 정사각형의 넓이 값을 구하는 함수
+  fun square(x : Int) : Int{
+      return x*x
+  }
+  // square2 변수에 람다식을 담아주세요
+  val square2 :(Int)->Int= {x:Int-> x*x}
+  // 변수 ---> 매개변수, 전달인자 ,결과값으로 람다식을 사용 할 수 있다.
+  // 고차함수
+```
