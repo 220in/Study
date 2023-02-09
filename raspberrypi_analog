@@ -1,0 +1,20 @@
+# ANALOG 신호는 GPIO 12,13,18,19 핀만 가능하다
+import RPi.GPIO as gp
+
+led = 18
+gp.setmode(gp.BCM)
+gp.setup(led,gp.OUT)
+
+# 500 ~ 5000 사이의 값을 사용하여 아날로그 신호를 설정한다.
+p = gp.PWM(led,500)
+
+# pwm을 시작하기 위한 함수 <- 아날로그 신호를 사용하겠다는 함수
+p.start(0)
+
+try:
+    while True :
+        print("Hello Wolrd!")
+# ctrl + c 를 누르면 except 로 빠져나가 chanel hello wolrd 출력을 멈춘다.
+except KeyboardInterrupt:
+    # GPIO 채널들을 RESET 해주는 함수 
+    gp.cleanup()
