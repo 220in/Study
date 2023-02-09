@@ -1,0 +1,20 @@
+import RPi.GPIO as gp
+import time
+
+btn = 21
+led = 18
+
+gp.setmode(gp.BCM)
+gp.setup(led,gp.OUT)
+gp.setup(btn,gp.IN)
+
+while True :
+   btnState = gp.input(btn)
+   print(btnState)
+   time.sleep(0.01)
+   
+   gp.output(led,gp.HIGH) if btnState == 1 else gp.output(led,gp.LOW)
+       
+   
+   #다른방법
+   gp.output(led,btnState)
