@@ -1,0 +1,6 @@
+- 데이터 조회
+
+     1. Cursor Object 가져오기 : cursor = db.cursor()
+
+1. SQL 실행하기 : cursor.execute(SQL)
+2. mysql 서버로부터 데이터 가져오기 :fetch메소드 사용
