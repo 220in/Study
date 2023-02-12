@@ -1,0 +1,24 @@
+package 인터페이스;
+
+import 추상클래스.Employee;
+
+// 인터페이스는 다중 구현(다중상속)이 가능하다.
+public class Person extends Employee implements Codable, Temp {
+	public Person(String empno, String name, int pay) {
+		super(empno, name, pay);
+	}
+
+	// 인터페이스 구현하는 키워드 : implements
+
+	// 추상 메서드를 반드시 오버라이딩 해야한다.
+	@Override
+	public void Coding() {
+
+	}
+
+	@Override
+	public int getPayMoney() {
+		return 0;
+	}
+
+}
