@@ -1,0 +1,48 @@
+- Anaconda에서 다운로드
+- Jupyter notebook 사용법
+
+     command 모드에서 영어 m→(마크다운) 누르면 앞에 in 키워드 없어짐 
+
+  **<단축키 사용법>**
+
+     notebook 모드에서 #으로 html의 h1~태그의 기능 사용가능
+
+     (-) 기호는 글머리 기호로 변환
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f3a0426-7158-470b-8cb1-5a2a9dce1835/Untitled.png)
+
+  ************자료형************
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eecde4ca-b2da-4240-bc1c-f5dfcca8048c/Untitled.png)
+
+**이스케이프코드**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cac3c95c-8faf-4d0c-b312-29ee1a0de6a4/Untitled.png)
+
+but! Python에서는 이스케이프 코드를 사용할 필요없이
+
+ “” 안에 ‘ 를 쓰고 싶으면 “ ‘ ” 
+
+ ‘’ 안에 “ 를 쓰고 싶으면 ‘ ” ’
+
+줄바꿈은 “”” 안에서 enter “””
+
+                         **문자열의 배열에 인덱스번호에 따른 인덱싱과 슬라이싱**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6730b8f0-2949-4a74-a86b-bfbaf909f539/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ae6e28b-deed-44e2-b522-b0fce9bdf391/Untitled.png)
+
+                   예시
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80953c6b-6317-4885-9753-cea5072fbd49/Untitled.png)
+
+**문자열 관련함수**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4df55306-76b2-42d4-a175-38923b4c0824/Untitled.png)
+
+**연산자**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6eeab822-37ee-46b3-a5b5-834f0fbb9974/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d05ea685-a376-4b71-8ba5-1a431c44e099/Untitled.png)
