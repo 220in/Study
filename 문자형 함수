@@ -1,0 +1,50 @@
+### **문자형 함수**
+
+- LOWER
+    
+    : 입력 받은 문자열에서 대문자를 소문자로 바꿔준다.
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd87e660-e3be-4aaa-aba8-fe0b83fbeef6/Untitled.png)
+    
+- SUBSTR
+    
+     : 입력 받은 문자형 리터럴에서 시작위치에서 길이만큼 잘라낸다.
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2cbfecbb-0183-4a17-917c-e88bb8a341fb/Untitled.png)
+    
+- REPLACE
+    
+      : 입력 받은 문자형 리터럴 안에 있는 바뀔 값을 바꿀값을 변경하여 출력한다.
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b7e4fcb-f8ef-4369-9ed1-6d59f99584e4/Untitled.png)
+    
+
+- UPPER
+
+: 입력 받은 문자열에서 소문자를 대문자로 바꿔준다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21172597-1332-400a-b6db-af010175b13b/Untitled.png)
+
+- TRIM
+
+: 입력 받은 문자형 리터럴의 양 끝의 공백을 제거한다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ec5826d3-0d1f-43f2-984b-43f37fccb652/Untitled.png)
+
+- LENGTH
+
+: 입력 받은 문자값의 개수를 반환한다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aafc8f10-1282-46a0-b518-af588afee430/Untitled.png)
+
+### **숫자형 함수**
+
+- MOD
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08187f12-80a5-4c18-97f1-127d8a7bbf59/Untitled.png)
+
+### 
+
+- ROUND
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0572982b-39b1-47da-8b14-69e68fb40557/Untitled.png)
