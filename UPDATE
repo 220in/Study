@@ -1,0 +1,18 @@
+- **UPDATE** (21번)
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a2a83538-2223-4ae7-8a9d-08d7e92b43aa/Untitled.png)
+    
+
+         -  WHERE 절에 따로 조건을 주지 않으면 모든 튜플의 데이터가 바뀜
+
+         -  NOT NULL 조건을 가진 컬럼에 NULL 로 업데이트시 오류 발생
+
+- **DELETE** (22,23번)
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8e722d3f-f1a9-47de-8407-6cd96b5118ea/Untitled.png)
+    
+       - WHERE 절에 따로 조건을 주지 않으면 모든 튜플의 데이터가 삭제됨
+    
+- **SELECT** (24번)
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1e587ae4-fc90-4672-a8cb-b7e309620a64/Untitled.png)
