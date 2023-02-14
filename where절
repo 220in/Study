@@ -1,0 +1,33 @@
+- 비교 조건 : = , > , <
+- 논리 조건 : AND , OR → AND가 OR 보다 우선 시 함
+- **오라클에서 NULL 데이터는 ?** (8,36번)
+
+       - IS NULL/ IS NOT NULL 연산으로만 비교가 가능하다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f493a1ef-fca2-410b-b056-96817e299beb/Untitled.png)
+
+- **SQL 연산자 중 BETWEEN  연산자는 범위조건 연산입니다.** (38번)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/76350ed4-5a56-42d8-8298-d6296a295dab/Untitled.png)
+
+- **SQL 연산자 중 LIKE 연산자는 _ 나 % 를 이용해 매칭 연산을 진행합니다.**
+
+             - SELECT * FROM 직원 WHERE 이름 LIKE ‘강%’ ⇒ 이름이 ‘강’으로 시작하는..
+
+             - SELECT * FROM 직원 WHERE 이름 LIKE ‘%홍%’ ⇒ 이름 가운데에 ‘홍’이 포함된..
+
+             - SELECT * FROM 직원 WHERE 이름 LIKE’__수’ ⇒ 세번째 글자가 ‘수’인…
+
+- **ROWNUM 이란**
+
+       - 테이블의 출력 행(튜플)에 임시로 부여되는 일렬번호 입니다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f106c99-b7c2-47cc-b1d1-880af07c8ef7/Untitled.png)
+
+       - WHERE 조건에 ROWNUM을 사용하면 출력되는 튜플(행) 개수를 제한할 수 있습니다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/93799fd2-487a-4544-ad36-a4c398ab5608/Untitled.png)
+
+        - ROWNUM은 1의 값을 먼저 사용해야 2의 값을 사용할 수 있습니다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/281fdcd9-0418-47be-88d6-bba8e4fd1545/Untitled.png)
