@@ -1,4 +1,4 @@
-Android
+Android  
 [ 액티비티 생명주기]
 onCreate-> onStart -> onResume -> onPause -> onStop
 
