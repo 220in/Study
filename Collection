@@ -1,4 +1,4 @@
-// <<Collection>>
+<<Collection>>
     // MutableListOf : 크기가 변할 수 있는 (크키가 변하지 않는 : listOf)
     //  1) 크기가 변하지 않는 listOf
     var testList1 = listOf("a","b","c")
