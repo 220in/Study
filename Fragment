@@ -22,6 +22,6 @@ editor를 사용해서 데터를 put(키값, value)
 
 저장해 놓은 데이터를 꺼낼때
 
-spf가져오기
+spf가져오기!
 
 spf.getString(키값,기본값)
