@@ -1,4 +1,4 @@
-# ANALOG 신호는 GPIO 12,13,18,19 핀만 가능하다
+ANALOG 신호는 GPIO 12,13,18,19 핀만 가능하다
 import RPi.GPIO as gp
 
 led = 18
