@@ -10,12 +10,12 @@ import android.widget.Toast
 
 //모든 뷰들의 경로 : widget
 
-// : -> 상속(extends,implements)
+ : -> 상속(extends,implements)
 class MainActivity : AppCompatActivity() {
 
-    // tvHello 를 oncreat에서 사용하기 위해 전역 변수 설정
-    // 변수 선언 1번만 이루어져야한다.
-    // private lateinit --> onCreate 안에서 초기화가 이루어진다는 것을 의미한다.
+     tvHello 를 oncreat에서 사용하기 위해 전역 변수 설정
+     변수 선언 1번만 이루어져야한다.
+     private lateinit --> onCreate 안에서 초기화가 이루어진다는 것을 의미한다.
     private lateinit var tvHello : TextView
     // null
     // tvHello가 나중에 OnCreate안에서 반드시 초기화가 된다라는 것을 약속
