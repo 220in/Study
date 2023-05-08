@@ -2,7 +2,7 @@
      MutableListOf : 크기가 변할 수 있는 (크키가 변하지 않는 : listOf)
       1) 크기가 변하지 않는 listOf
     var testList1 = listOf("a","b","c")
-    // 선언을 하고나면 아래쪽에서 크기변경이 불가능
+    선언을 하고나면 아래쪽에서 크기변경이 불가능
     // 크기가 3으로 고정되어있는 list
     println(testList1[0]) // --> a
     //  2) 크기가 변하는 mutableListOf
