@@ -1,4 +1,4 @@
-### WSGI : Web Server Gateway Interface
+ WSGI : Web Server Gateway Interface
 
 - 서버가 웹 어플리케이션과 통신하기 위한 Interface
 - 최소한의 기능만을 제공하여 유연하게 애플리케이션 작성 가능
