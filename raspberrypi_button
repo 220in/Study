@@ -16,5 +16,5 @@ while True :
    gp.output(led,gp.HIGH) if btnState == 1 else gp.output(led,gp.LOW)
        
    
-   #다른방법
+   다른방법
    gp.output(led,btnState)
