@@ -10,7 +10,7 @@
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/76350ed4-5a56-42d8-8298-d6296a295dab/Untitled.png)
 
-- **SQL 연산자 중 LIKE 연산자는 _ 나 % 를 이용해 매칭 연산을 진행합니다.**
+- *SQL 연산자 중 LIKE 연산자는 _ 나 % 를 이용해 매칭 연산을 진행합니다.**
 
              - SELECT * FROM 직원 WHERE 이름 LIKE ‘강%’ ⇒ 이름이 ‘강’으로 시작하는..
 
