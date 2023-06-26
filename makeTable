@@ -16,7 +16,7 @@ public class ex01makeTable extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// 1.PrintWriter 객체 생성
+		/ 1.PrintWriter 객체 생성
 		PrintWriter out = response.getWriter();
 
 		// 2. 출력 스트림 활용하여 table 태그 만들어내기
