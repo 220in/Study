@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 
-//모든 뷰들의 경로 : widget
+/모든 뷰들의 경로 : widget
 
  : -> 상속(extends,implements)
 class MainActivity : AppCompatActivity() {
